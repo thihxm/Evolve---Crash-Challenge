@@ -7,6 +7,17 @@
 
 import UIKit
 
+extension UIView {
+    func fadeTransition(_ duration:CFTimeInterval) {
+        let animation = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name:
+            CAMediaTimingFunctionName.easeInEaseOut)
+        animation.type = CATransitionType.fade
+        animation.duration = duration
+        layer.add(animation, forKey: CATransitionType.fade.rawValue)
+    }
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var LabelStory: UILabel!
@@ -16,6 +27,7 @@ class ViewController: UIViewController {
     
     var currentStoryLine = "Intro"
     var previousStoryLine = "Intro"
+    let fadeDuration = 0.4
     
     let story: [String: StoryLine] = [
         "Intro": StoryLine(
@@ -198,10 +210,11 @@ class ViewController: UIViewController {
         ),
     ]
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+
         LabelStory.text = story[currentStoryLine]!.label
         ButtonFirstOption.setTitle(story[currentStoryLine]!.options[0].buttonLabel, for: .normal)
         if let secondButtonOptions = story[currentStoryLine]?.options[1] {
@@ -241,21 +254,26 @@ class ViewController: UIViewController {
         story[currentStoryLine]!.timesVisited += 1
         if storyLineLabel == "Comer" && currentStoryLine == "Seguir seu instinto" {
             if story["Comer"]!.timesVisited == 3 {
+                ButtonThirdOption.setTitle(story["Comer"]!.options[2].buttonLabel, for: .normal)
                 ButtonThirdOption.isEnabled = true
                 ButtonThirdOption.alpha = 1
-                ButtonThirdOption.setTitle(story["Comer"]!.options[2].buttonLabel, for: .normal)
             }
         }
         previousStoryLine = currentStoryLine
         currentStoryLine = storyLineLabel
 
+        LabelStory.fadeTransition(fadeDuration)
+        ButtonFirstOption.fadeTransition(fadeDuration)
+        ButtonSecondOption.fadeTransition(fadeDuration)
+        ButtonThirdOption.fadeTransition(fadeDuration)
+
         LabelStory.text = story[currentStoryLine]!.label
         ButtonFirstOption.setTitle(story[currentStoryLine]!.options[0].buttonLabel, for: .normal)
         if story[currentStoryLine]!.options.count > 1 {
             let secondButtonOptions = story[currentStoryLine]!.options[1]
+            ButtonSecondOption.setTitle(secondButtonOptions.buttonLabel, for: .normal)
             ButtonSecondOption.isEnabled = true
             ButtonSecondOption.alpha = 1
-            ButtonSecondOption.setTitle(secondButtonOptions.buttonLabel, for: .normal)
         } else {
             ButtonSecondOption.isEnabled = false
             ButtonSecondOption.alpha = 0

@@ -15,21 +15,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você está em lugar escuro. Consciente, mas não sabe onde está. Você escolhe:" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyW-Fq-wqG">
-                                <rect key="frame" x="20.5" y="66.5" width="373" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyW-Fq-wqG">
+                                <rect key="frame" x="20.5" y="44" width="373" height="129"/>
+                                <string key="text">Boa ideia! O vulto era um bicho amarelo estranho que devorou tudo que tinha próximo às bolinhas.\nEssa é sua vida: comer, crescer, fugir... acho que devemos seguir isso. Aquela sensação estranha após comer parece ser o caminho certo.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Bg4-m4-frA" userLabel="First Option">
+                                <rect key="frame" x="0.0" y="438" width="207" height="30"/>
+                                <state key="normal" title="First Option"/>
+                                <connections>
+                                    <action selector="FirstButtonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Tt5-jv-bnn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="L1g-lS-t9U" userLabel="Third Option">
+                                <rect key="frame" x="164" y="492" width="86" height="30"/>
+                                <state key="normal" title="Third Option"/>
+                                <connections>
+                                    <action selector="ThirdButtonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="5nI-hD-fW5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bWw-2r-buG" userLabel="Second Option">
+                                <rect key="frame" x="207" y="438" width="207" height="30"/>
+                                <state key="normal" title="Second Option"/>
+                                <connections>
+                                    <action selector="SecondButtonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="0x5-JX-ME3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="L1g-lS-t9U" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="84P-PO-EN6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Bg4-m4-frA" secondAttribute="trailing" symbolic="YES" id="8fq-vd-HDY"/>
+                            <constraint firstItem="Bg4-m4-frA" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="BhZ-2n-fQW"/>
                             <constraint firstItem="cyW-Fq-wqG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="SrB-eR-Nfu"/>
-                            <constraint firstItem="cyW-Fq-wqG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="2" id="VNY-HY-kAt"/>
+                            <constraint firstItem="bWw-2r-buG" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="TGd-oT-aon"/>
+                            <constraint firstItem="bWw-2r-buG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UT0-5T-1QE"/>
+                            <constraint firstItem="cyW-Fq-wqG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VNY-HY-kAt"/>
+                            <constraint firstItem="bWw-2r-buG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="VNj-fp-KJH"/>
                             <constraint firstItem="cyW-Fq-wqG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Waj-a6-eTx"/>
+                            <constraint firstItem="bWw-2r-buG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Bg4-m4-frA" secondAttribute="trailing" id="Xdm-js-ZkX"/>
+                            <constraint firstItem="L1g-lS-t9U" firstAttribute="top" secondItem="Bg4-m4-frA" secondAttribute="bottom" constant="24" id="ZjU-wP-UTh"/>
+                            <constraint firstItem="Bg4-m4-frA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bGc-pK-cuf"/>
+                            <constraint firstItem="Bg4-m4-frA" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="v8C-T7-IUP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ButtonFirstOption" destination="Bg4-m4-frA" id="nuU-Bn-LcU"/>
+                        <outlet property="ButtonSecondOption" destination="bWw-2r-buG" id="XSe-J1-0GT"/>
+                        <outlet property="ButtonThirdOption" destination="L1g-lS-t9U" id="Sq3-4d-Uj1"/>
+                        <outlet property="LabelStory" destination="cyW-Fq-wqG" id="Jzq-ht-YYQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

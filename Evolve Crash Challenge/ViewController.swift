@@ -67,7 +67,7 @@ class ViewController: UIViewController {
             options: [
                 ("Ignorar e continuar comendo", "Ignorar e continuar comendo"),
                 ("Fugir", "Fugir"),
-                ("A sensação estranha continua", "A sensação estranha continua")
+                ("Desta vez a sensação estranha está maior", "A sensação estranha continua")
             ]
         ),
         "Ignorar e continuar comendo": StoryLine(
@@ -149,7 +149,7 @@ class ViewController: UIViewController {
         "Comer bastante": StoryLine(
             "Aquela sensação estranha voltou e sua visão começa a escurecer. Muito rapidamente você está desacordado.",
             options: [
-                ("Acordar parceiro", "Acordar parceiro"),
+                ("Acordar de novo", "Acordar parceiro"),
             ]
         ),
         "Acordar parceiro": StoryLine(
@@ -253,7 +253,7 @@ class ViewController: UIViewController {
     func changeStoryLine(_ storyLineLabel: String) {
         story[currentStoryLine]!.timesVisited += 1
         if storyLineLabel == "Comer" && currentStoryLine == "Seguir seu instinto" {
-            if story["Comer"]!.timesVisited == 3 {
+            if story["Comer"]!.timesVisited >= 2 {
                 ButtonThirdOption.setTitle(story["Comer"]!.options[2].buttonLabel, for: .normal)
                 ButtonThirdOption.isEnabled = true
                 ButtonThirdOption.alpha = 1

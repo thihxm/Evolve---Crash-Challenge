@@ -50,9 +50,9 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sze-fi-njD" userLabel="Red Light">
-                                <rect key="frame" x="319" y="538.66666666666663" width="71" height="80"/>
+                                <rect key="frame" x="319" y="538.66666666666663" width="71" height="71"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="e7Z-6i-vcH"/>
+                                    <constraint firstAttribute="height" constant="71" id="e7Z-6i-vcH"/>
                                 </constraints>
                             </imageView>
                         </subviews>

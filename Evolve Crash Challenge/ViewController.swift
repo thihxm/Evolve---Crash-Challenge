@@ -182,7 +182,7 @@ class ViewController: UIViewController {
                 ("Tentar novamente", "Intro"),
             ],
             backgroundImage: "Fundo Mar",
-            imageName: nil // TODO: COLOCAR LUZ VERMELHAS ATRÁS
+            imageName: nil
         ),
         "Comer bastante": StoryLine(
             "Aquela sensação estranha voltou e sua visão começa a escurecer. Muito rapidamente você está desacordado.",
@@ -223,7 +223,7 @@ class ViewController: UIViewController {
                 ("Ignorar", "Ignorar")
             ],
             backgroundImage: "Fundo Mar",
-            imageName: nil // TODO: COLOCAR PARCEIRO
+            imageName: "Dae Parceiro"
         ),
         "Ignorar": StoryLine(
             "Sua existência começa a sumir, o breu se aproxima, a luz começa a acabar e sua vida passa como um filme em seu consciente...",
@@ -255,7 +255,7 @@ class ViewController: UIViewController {
             options: [
                 ("Continuar tentando", "Continuar tentando"),
             ],
-            backgroundImage: "Fundo Mar",
+            backgroundImage: "Escuridao Consome",
             imageName: "Estagio 3"
         ),
         "Continuar tentando": StoryLine(
@@ -276,6 +276,11 @@ class ViewController: UIViewController {
         if let backgroundImageName = story[currentStoryLine]!.backgroundImage {
             view.backgroundColor = UIColor(patternImage: UIImage(named: backgroundImageName)!)
         }
+        if let contentImageName = story[currentStoryLine]!.imageName {
+            ImageContent.image = UIImage(named: contentImageName)!
+        } else {
+            ImageContent.image = nil
+        }
         
         LabelStory.text = story[currentStoryLine]!.label
         ButtonFirstOption.setTitle(story[currentStoryLine]!.options[0].buttonLabel, for: .normal)
@@ -284,6 +289,8 @@ class ViewController: UIViewController {
         }
         ButtonThirdOption.isEnabled = false
         ButtonThirdOption.alpha = 0
+        RedLight.image = UIImage(named: "Luz Vermelha")!
+        RedLight.isHidden = true
     }
 
     @IBAction func FirstButtonTouchDown(_ sender: Any) {
@@ -343,11 +350,11 @@ class ViewController: UIViewController {
             ImageContent.image = nil
         }
         
-        
-        if storyLineLabel == "Ir em sua direção" {
-            RedLight.image = UIImage(named: "Luz Vermelha")!
+        print(storyLineLabel)
+        if storyLineLabel == "Acordar" {
+            RedLight.isHidden = false
         } else {
-            RedLight.image = nil
+            RedLight.isHidden = true
         }
 
         LabelStory.text = story[currentStoryLine]!.label

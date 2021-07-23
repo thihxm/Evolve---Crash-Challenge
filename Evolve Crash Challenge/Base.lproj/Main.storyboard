@@ -43,12 +43,25 @@
                                     <action selector="FirstButtonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Tt5-jv-bnn"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KUR-Lg-RVH" userLabel="Image Content">
+                                <rect key="frame" x="75" y="347.66666666666669" width="240" height="159"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="r0L-3T-h5b"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sze-fi-njD" userLabel="Red Light">
+                                <rect key="frame" x="319" y="538.66666666666663" width="71" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="e7Z-6i-vcH"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="L1g-lS-t9U" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2d4-d0-wA8"/>
                             <constraint firstItem="cyW-Fq-wqG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="5JC-Uk-wVZ"/>
+                            <constraint firstItem="sze-fi-njD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="319" id="7DU-8T-s4e"/>
                             <constraint firstItem="L1g-lS-t9U" firstAttribute="width" secondItem="Bg4-m4-frA" secondAttribute="width" id="AiN-0V-qKu"/>
                             <constraint firstItem="Bg4-m4-frA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="Azp-4U-HDl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bg4-m4-frA" secondAttribute="bottom" constant="24" id="DrZ-qz-KTr"/>
@@ -56,21 +69,28 @@
                             <constraint firstItem="Bg4-m4-frA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PTM-aj-yFr"/>
                             <constraint firstItem="bWw-2r-buG" firstAttribute="top" secondItem="L1g-lS-t9U" secondAttribute="bottom" constant="24" id="T3t-cK-ywL"/>
                             <constraint firstItem="bWw-2r-buG" firstAttribute="width" secondItem="Bg4-m4-frA" secondAttribute="width" id="aJK-R8-XH8"/>
+                            <constraint firstItem="KUR-Lg-RVH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="iYw-1g-NPA"/>
                             <constraint firstItem="cyW-Fq-wqG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="jHb-Xo-RFQ"/>
+                            <constraint firstItem="KUR-Lg-RVH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="jJq-Bt-swa"/>
+                            <constraint firstItem="sze-fi-njD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="k3h-4O-niU"/>
                             <constraint firstItem="cyW-Fq-wqG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="osN-Ln-v3U"/>
                             <constraint firstItem="Bg4-m4-frA" firstAttribute="top" secondItem="bWw-2r-buG" secondAttribute="bottom" constant="24" id="ouE-fP-Abd"/>
+                            <constraint firstItem="sze-fi-njD" firstAttribute="top" secondItem="KUR-Lg-RVH" secondAttribute="bottom" constant="32" id="rhr-cy-wPp"/>
+                            <constraint firstItem="KUR-Lg-RVH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xKz-Za-VrM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ButtonFirstOption" destination="Bg4-m4-frA" id="nuU-Bn-LcU"/>
                         <outlet property="ButtonSecondOption" destination="bWw-2r-buG" id="XSe-J1-0GT"/>
                         <outlet property="ButtonThirdOption" destination="L1g-lS-t9U" id="Sq3-4d-Uj1"/>
+                        <outlet property="ImageContent" destination="KUR-Lg-RVH" id="cFz-Nm-t79"/>
                         <outlet property="LabelStory" destination="cyW-Fq-wqG" id="Jzq-ht-YYQ"/>
+                        <outlet property="RedLight" destination="sze-fi-njD" id="1Pi-Wl-ajq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+            <point key="canvasLocation" x="130.76923076923077" y="115.16587677725119"/>
         </scene>
     </scenes>
 </document>

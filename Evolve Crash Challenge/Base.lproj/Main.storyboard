@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,32 +12,32 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Evolve_Crash_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyW-Fq-wqG">
-                                <rect key="frame" x="20.5" y="44" width="373" height="129"/>
+                                <rect key="frame" x="19.666666666666657" y="68" width="351" height="129"/>
                                 <string key="text">Boa ideia! O vulto era um bicho amarelo estranho que devorou tudo que tinha próximo às bolinhas.\nEssa é sua vida: comer, crescer, fugir... acho que devemos seguir isso. Aquela sensação estranha após comer parece ser o caminho certo.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="L1g-lS-t9U" userLabel="Third Option">
-                                <rect key="frame" x="20.5" y="676" width="373" height="30"/>
+                                <rect key="frame" x="19.666666666666657" y="648" width="351" height="30"/>
                                 <state key="normal" title="Third Option"/>
                                 <connections>
                                     <action selector="ThirdButtonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="5nI-hD-fW5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bWw-2r-buG" userLabel="Second Option">
-                                <rect key="frame" x="20.5" y="730" width="373" height="30"/>
+                                <rect key="frame" x="19.666666666666657" y="702" width="351" height="30"/>
                                 <state key="normal" title="Second Option"/>
                                 <connections>
                                     <action selector="SecondButtonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="0x5-JX-ME3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Bg4-m4-frA" userLabel="First Option">
-                                <rect key="frame" x="20.5" y="784" width="373" height="30"/>
+                                <rect key="frame" x="19.666666666666657" y="756" width="351" height="30"/>
                                 <state key="normal" title="First Option"/>
                                 <connections>
                                     <action selector="FirstButtonTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Tt5-jv-bnn"/>
@@ -51,12 +51,12 @@
                             <constraint firstItem="cyW-Fq-wqG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="5JC-Uk-wVZ"/>
                             <constraint firstItem="L1g-lS-t9U" firstAttribute="width" secondItem="Bg4-m4-frA" secondAttribute="width" id="AiN-0V-qKu"/>
                             <constraint firstItem="Bg4-m4-frA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="Azp-4U-HDl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bg4-m4-frA" secondAttribute="bottom" constant="48" id="DrZ-qz-KTr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bg4-m4-frA" secondAttribute="bottom" constant="24" id="DrZ-qz-KTr"/>
                             <constraint firstItem="bWw-2r-buG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Nca-yC-EYx"/>
                             <constraint firstItem="Bg4-m4-frA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PTM-aj-yFr"/>
                             <constraint firstItem="bWw-2r-buG" firstAttribute="top" secondItem="L1g-lS-t9U" secondAttribute="bottom" constant="24" id="T3t-cK-ywL"/>
                             <constraint firstItem="bWw-2r-buG" firstAttribute="width" secondItem="Bg4-m4-frA" secondAttribute="width" id="aJK-R8-XH8"/>
-                            <constraint firstItem="cyW-Fq-wqG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jHb-Xo-RFQ"/>
+                            <constraint firstItem="cyW-Fq-wqG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="jHb-Xo-RFQ"/>
                             <constraint firstItem="cyW-Fq-wqG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="osN-Ln-v3U"/>
                             <constraint firstItem="Bg4-m4-frA" firstAttribute="top" secondItem="bWw-2r-buG" secondAttribute="bottom" constant="24" id="ouE-fP-Abd"/>
                         </constraints>

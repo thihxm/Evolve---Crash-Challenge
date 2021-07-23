@@ -50,7 +50,7 @@ class ViewController: UIViewController {
             ]
         ),
         "Nadar": StoryLine(
-            "Pequenas bolas rosas estão boiando. Você tem duas opções:",
+            "Pequenas bolas rosa estão boiando. Você tem duas opções:",
             options: [
                 ("Continuar nadando", "Morte"),
                 ("Comer", "Comer")
@@ -90,20 +90,20 @@ class ViewController: UIViewController {
             ]
         ),
         "Comer mais": StoryLine(
-            "Aparentemente esta é a solução. Dentro de você algo parece guiá-lo para onde as bolinhas rosas estão. Vamos atrás delas!",
+            "Aparentemente esta é a solução. Dentro de você algo parece guiá-lo para onde as bolinhas rosa estão. Vamos atrás delas!",
             options: [
                 ("Seguir seu instinto", "Seguir seu instinto"),
             ]
         ),
         "Seguir seu instinto": StoryLine(
-            "Mais bolinhas rosas! Algo te diz para comê-las.",
+            "Mais bolinhas rosa! Algo te diz para comê-las.",
             options: [
                 ("Comer", "Comer"),
                 ("Ignorar e continuar nadando", "Morte")
             ]
         ),
         "Acordar": StoryLine(
-            "Sua corpo parece estar maior, existem alguns membros novos, sua boca está diferente, aquele guia para bolinhas rosas não existe mais. À sua direita existe uma luz vermelha muito intrigante e chamativa.",
+            "Sua corpo parece estar maior, existem alguns membros novos, sua boca está diferente, aquele guia para bolinhas rosa não existe mais. À sua direita existe uma luz vermelha muito intrigante e chamativa.",
             options: [
                 ("Ir em sua direção", "Ir em sua direção"),
                 ("Nadar para o outro lado", "Nadar para o outro lado")
@@ -116,7 +116,7 @@ class ViewController: UIViewController {
             ]
         ),
         "Nadar para o outro lado": StoryLine(
-            "Você encontrou bolinhas verdes, aparentemente seu guia trocou de objetivo.",
+            "Você encontrou bolinhas verde, aparentemente seu guia trocou de objetivo.",
             options: [
                 ("Comer", "Comer verde"),
             ]
@@ -128,14 +128,14 @@ class ViewController: UIViewController {
             ]
         ),
         "Continuar comendo": StoryLine(
-            "Estranhamente o seu guia aponta para novas bolinhas verdes, mas as que você está comendo ainda não acabaram...",
+            "Estranhamente o seu guia aponta para novas bolinhas verde, mas as que você está comendo ainda não acabaram...",
             options: [
                 ("Seguir o guia", "Seguir o guia"),
                 ("Seguir comendo", "Seguir comendo")
             ]
         ),
         "Seguir o guia": StoryLine(
-            "Boa escolha!\nAproveite as novas bolinhas verdes, elas estão divinas!",
+            "Boa escolha!\nAproveite as novas bolinhas verde, elas estão divinas!",
             options: [
                 ("Comer bastante", "Comer bastante"),
             ]
